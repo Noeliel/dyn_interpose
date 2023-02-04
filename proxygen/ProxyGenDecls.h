@@ -14,7 +14,7 @@
 extern "C" {
 #endif
 
-// generate extern declarations for forwarded symbols (see ProxyGen.h:9)
+// generate extern declarations for forwarded symbols (see ProxyGen.h:13)
 #define PROXYGEN(symbol) HEADERREFGEN(symbol)
 #include "../symbols.proxygen"
 #undef PROXYGEN

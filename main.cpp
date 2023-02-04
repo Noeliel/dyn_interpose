@@ -28,7 +28,7 @@ static const char *const targets[] = {
 
 BOOL CALL_CONV DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
 
-    // if you rename this variable, make sure to adjust ProxyGen.h:60
+    // if you rename this variable, make sure to adjust ProxyGen.h:64
     static HMODULE hTargetDll = NULL;
 
     if (fdwReason == DLL_PROCESS_ATTACH) {
@@ -58,7 +58,7 @@ BOOL CALL_CONV DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
             set_orig_symbol(targets[i], (void *)GetProcAddress(hTargetDll, targets[i]));
         }
 
-// locate and store addresses for all forwarded symbols (see ProxyGen.h:59)
+// locate and store addresses for all forwarded symbols (see ProxyGen.h:63)
 #define PROXYGEN(symbol) HOOKGEN(symbol)
 #include "symbols.proxygen"
 #undef PROXYGEN
