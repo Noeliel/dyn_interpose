@@ -1,0 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Noeliel
+//
+// SPDX-License-Identifier: MIT
+
+PROXYGEN(SomeClassThatIAmNotInterestedIn)
+PROXYGEN(SomeOtherUnimportantClass)
+PROXYGEN(some_function_that_i_do_not_care_about)
